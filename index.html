@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="icon"
+      href="https://rm-content.s3.amazonaws.com/5d9dd07fd59dad007e5c3a8a/Favicon-f187ac57-f65a-410c-879b-0538d98f6431_144.png"
+      type="image/png"
+      class=""
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-logo">
+          <img class="logo" src="./img/logo.svg" alt="" />
+          <p>PomoCollar</p>
+        </div>
+
+        <div class="subtitle">
+          <p>special for RedCollar</p>
+        </div>
+      </div>
+      <div class="hr">
+        <hr />
+      </div>
+      <div class="timer" data-js-timer>
+        <div class="timer__types">
+          <ul class="timer__types-list">
+            <li class="timer__types-item">
+              <button
+                class="timer__types-button is-active"
+                type="button"
+                data-js-timer-type-button="25"
+              >
+                <span>Pomo</span>
+                (<span data-js-timer-pomodoro-type-label>25</span> min)
+              </button>
+            </li>
+
+            <li class="timer__types-item">
+              <button
+                class="timer__types-button"
+                type="button"
+                data-js-timer-type-button="5"
+              >
+                <span>ShortBreak</span>
+                (<span data-js-timer-short-break-type-label>5</span> min)
+              </button>
+            </li>
+            <li class="timer__types-item">
+              <button
+                class="timer__types-button"
+                type="button"
+                data-js-timer-type-button="15"
+              >
+                <span>LongBreak</span>
+                (<span data-js-timer-long-break-type-label>15</span> min)
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="timer__body">
+          <span class="timer__minutes" data-js-timer-minutes>25</span>
+          <span class="timer__separator">:</span>
+          <span class="timer__seconds" data-js-timer-seconds>00</span>
+        </div>
+
+        <div class="timer__actions">
+          <ul class="timer__actions-list">
+            <li class="timer__actions-item">
+              <button
+                class="timer__actions-button"
+                type="button"
+                data-js-timer-start-button
+              >
+                Start
+              </button>
+            </li>
+
+            <li class="timer__actions-item">
+              <button
+                class="timer__actions-button"
+                type="button"
+                data-js-timer-pause-button
+              >
+                Pause
+              </button>
+            </li>
+
+            <li class="timer__actions-item">
+              <button
+                class="timer__actions-button"
+                type="button"
+                data-js-timer-reset-button
+              >
+                Reset
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="timer__inputs">
+          <div class="timer__inputs-item">
+            <label for="pomodoro">Pomodoro</label>
+
+            <input
+              id="pomodoro"
+              type="number"
+              data-js-timer-pomodoro-type-input
+            />
+          </div>
+
+          <div class="timer__inputs-item">
+            <label for="shortBreak">ShortBreak</label>
+            <input
+              id="shortBreak"
+              type="number"
+              data-js-timer-short-break-type-input
+            />
+          </div>
+          <div class="timer__inputs-item">
+            <label for="longBreak">LongBreak</label>
+            <input
+              id="longBreak"
+              type="number"
+              data-js-timer-long-break-type-input
+            />
+          </div>
+        </div>
+
+        <div class="tasks">
+          <p>Tasks</p>
+        </div>
+
+        <div class="timer__todos">
+          <ul class="timer__todos-list" data-js-timer-todos-list></ul>
+          <form class="timer__todos-form" data-js-timer-todos-form>
+            <input
+              class="timer__todos-input"
+              placeholder="What are you working on?"
+              data-js-timer-todos-title-input
+            />
+            <input
+              class="timer__todos-input"
+              placeholder="Est pomodoros"
+              type="number"
+              value="1"
+              data-js-timer-todos-count-input
+            />
+            <button class="timer__todos-button" type="submit">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
